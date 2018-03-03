@@ -54,9 +54,18 @@ $(function() {
 		});
 	}carouselService();
 
+	//Adds a span to the last word /(\S+)\s*$/
+
 	$('.carousel-services-composition .h3').each(function() {
 		var ths = $(this);
 		ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
+	});
+
+		//Selects the first word from the string /^(\S+)/
+
+	$('section .h2').each(function() {
+		var ths = $(this);
+		ths.html(ths.html().replace(/^(\S+)/, '<span>$1</span>'));
 	});
 
 	//Resize windiw
